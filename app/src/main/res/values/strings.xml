@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ElmURL</string>
+    <string name="image_added">Picture added!</string>
+    <string name="fill_gaps">Elmo says: Oops, the gaps!</string>
+    <string name="error_tag">#error</string>
+    <string name="error_name">Elmo says: ERROR</string>
+    <string name="pick_color">Elmo says: Pick a color</string>
+</resources>
