@@ -11,9 +11,12 @@
             android:focusable="true"
             android:focusableInTouchMode="true"
             android:background="@color/colorCloudLight" android:id="@+id/scrollView2">
-    <android.support.constraint.ConstraintLayout
+    <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+    >
 
         <EditText
                 android:layout_width="300dp"
@@ -21,12 +24,12 @@
                 android:ems="10"
                 android:theme="@style/EditTextColorLine"
                 android:id="@+id/url_text_edit"
-                android:hint="URL" app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+                android:hint="URL"
                 android:inputType="text"
                 android:fontFamily="sans-serif-light"
-                android:layout_marginTop="32dp"
-                app:layout_constraintHorizontal_bias="0.495"/>
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+        />
         <EditText
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
@@ -35,45 +38,41 @@
                 android:ems="10"
                 android:id="@+id/name_text_edit"
                 android:hint="Name"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
                 android:fontFamily="sans-serif-light"
-                app:layout_constraintHorizontal_bias="0.495"
-                android:layout_marginTop="20dp"
-                app:layout_constraintTop_toBottomOf="@+id/url_text_edit"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+        />
+        <Button
+                android:text="Cloud Color"
+                android:layout_width="177dp"
+                android:layout_height="51dp"
+                android:id="@+id/color_button"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+        />
+        <DatePicker
+                android:layout_width="272dp"
+                android:layout_height="214dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:datePickerMode="spinner"
+                android:calendarViewShown="false"
+                android:id="@+id/datePicker"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
         />
         <Button
                 android:text="Add new image!"
                 android:background="@drawable/add_button"
                 android:layout_width="221dp"
                 android:layout_height="209dp"
-                android:id="@+id/add_button" app:layout_constraintEnd_toEndOf="parent"
-                android:fontFamily="sans-serif-light" android:textColor="@android:color/black"
+                android:id="@+id/add_button"
+                android:fontFamily="sans-serif-light"
+                android:textColor="@android:color/black"
                 android:gravity="center_horizontal|bottom"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
                 android:textSize="24sp"
-                android:layout_marginBottom="44dp"/>
-        <DatePicker android:layout_width="272dp"
-                    android:layout_height="214dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    android:layout_marginStart="32dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    android:layout_marginEnd="32dp"
-                    android:datePickerMode="spinner"
-                    android:calendarViewShown="false"
-                    android:id="@+id/datePicker"
-                    app:layout_constraintHorizontal_bias="0.493"
-                    android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/color_button"
-                    android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="@+id/add_button"
-                    app:layout_constraintVertical_bias="0.538"/>
-        <Button
-                android:text="Cloud Color"
-                android:layout_width="177dp"
-                android:layout_height="51dp"
-                android:id="@+id/color_button" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
-                app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
-                android:layout_marginTop="20dp" app:layout_constraintTop_toBottomOf="@+id/name_text_edit"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
         />
-    </android.support.constraint.ConstraintLayout>
+    </LinearLayout>
 </ScrollView>
